@@ -1,0 +1,14 @@
+CC = g++
+CFLAGS = -Wall
+
+SOURCES = main.cpp hostel.cpp
+HEADERS = header.h
+EXECUTABLE = path
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SOURCES) $(HEADERS)
+	$(CC) $(CFLAGS) $^ -o $@
+
+clean:
+	rm -f $(EXECUTABLE)
